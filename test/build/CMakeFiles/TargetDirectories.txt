@@ -1,0 +1,3 @@
+C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/test.dir
+C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/edit_cache.dir
+C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/rebuild_cache.dir

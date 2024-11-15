@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build",
+  "command": "C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-gcc.exe --sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf    -march=rv64gc_zba_zbb_zbc_zbs -mabi=lp64d -mcmodel=medany -msmall-data-limit=8 -ffunction-sections -fdata-sections -fno-common -ftls-model=local-exec -g -o CMakeFiles/test.dir/main.c.obj -c C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/main.c",
+  "file": "C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/main.c",
+  "output": "CMakeFiles/test.dir/main.c.obj"
+}
+]

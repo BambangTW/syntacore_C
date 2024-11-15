@@ -1,0 +1,10 @@
+#include "sc_print.h"
+#include "uart.h" // Include uart.h to get the declaration of sc1f_uart_init()
+
+int main() {
+    sc1f_uart_init(); // Initialize the UART
+    for(int i=0; i<5; i++){
+        sc_printf("Hello, World!\n");
+    }
+    return 0;
+}

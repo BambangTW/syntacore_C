@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+org.eclipse.core.variables.valueVariables=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<valueVariables>\r\n    <valueVariable name\="SCR_GCC_PATH" readOnly\="false" value\="C\:/sc-dt/eclipse/../riscv-gcc"/>\r\n    <valueVariable name\="SCR_TOOLKIT_PATH" readOnly\="false" value\="C\:/sc-dt/eclipse/.."/>\r\n    <valueVariable name\="SCR_WORKSPACE_PATH" readOnly\="false" value\="${eclipse_home}../workspace"/>\r\n</valueVariables>\r\n

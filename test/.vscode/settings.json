@@ -1,0 +1,16 @@
+{
+    "cmake.generator": "Unix Makefiles",
+    "cmake.configureOnOpen": true,
+    "cmake.configureSettings": {
+        "CMAKE_PROGRAM_PATH": "C:/sc-dt/tools/bin"
+    },
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "files.associations": {
+        "stdio.h": "c"
+    },
+    // Settings specific to Syntacore projects.
+    "syntacore.ide.path": "C:/sc-dt",
+    "syntacore.gcc.path": "C:/sc-dt/riscv-gcc",
+    "syntacore.qemu.path": "C:/sc-dt/tools/bin",
+    "syntacore.gdb.path": "C:/sc-dt/riscv-gcc"
+}

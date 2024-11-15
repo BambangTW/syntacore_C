@@ -1,0 +1,211 @@
+/*
+ * Copyright (C) 2017, Syntacore Ltd.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/// @file
+/// @brief "Hello" example program
+///
+/// @copyright Copyright (C) 2017, Syntacore Ltd.
+/// Licensed under the Apache License, Version 2.0 (the "License");
+/// you may not use this file except in compliance with the License.
+/// You may obtain a copy of the License at
+///     http://www.apache.org/licenses/LICENSE-2.0
+/// Unless required by applicable law or agreed to in writing, software
+/// distributed under the License is distributed on an "AS IS" BASIS,
+/// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+/// See the License for the specific language governing permissions and
+/// limitations under the License.
+
+//#include "sc_print.h"
+//#include "uart.h" // Include uart.h to get the declaration of sc1f_uart_init()
+//
+//int main() {
+//    sc1f_uart_init(); // Initialize the UART
+//    for(int i=0; i<1000; i++){
+//        sc_printf("Hello World, I am ITS32!!\n");
+//    }
+//    return 0;
+//}
+
+///*
+// * Benchmarking Program for Syntacore SCR1 Platform
+// *
+// * This program measures the number of CPU cycles taken to perform a simple computation.
+// * It uses the 'rdcycle' instruction to read the cycle counter before and after the computation.
+// * The results are then printed using sc_printf.
+// */
+//
+//#include "sc_print.h"
+//#include "uart.h"
+//
+//static inline uint32_t read_cycle(void) {
+//    uint32_t cycle;
+//    asm volatile ("rdcycle %0" : "=r"(cycle));
+//    return cycle;
+//}
+//
+//int main() {
+//    sc1f_uart_init(); // Initialize the UART
+//
+//    sc_printf("Starting benchmark...\n");
+//
+//    uint32_t start_cycle = read_cycle();
+//
+//    // Perform the computation: sum numbers from 0 to 999,999
+//    volatile uint32_t sum = 0;
+//    for (uint32_t i = 0; i < 1000000; i++) {
+//        sum += i;
+//    }
+//
+//    uint32_t end_cycle = read_cycle();
+//
+//    uint32_t cycles_taken = end_cycle - start_cycle;
+//
+//    sc_printf("Benchmark completed.\n");
+//    sc_printf("Cycles taken: %u\n", cycles_taken);
+//    sc_printf("Sum result: %u\n", sum);
+//
+//    return 0;
+//}
+
+///*
+// * LED Control Program for Syntacore SCR1 Platform
+// *
+// * This program demonstrates how to control the LEDs by writing to the MMIO address.
+// * It turns on all LEDs, waits for a while, and then turns them off.
+// */
+//
+//#include "sc_print.h"
+//#include "uart.h"
+//
+//#define LED_BASE_ADDRESS 0xFF020000
+//
+//volatile uint32_t *led = (volatile uint32_t *)LED_BASE_ADDRESS;
+//
+//int main() {
+//    sc1f_uart_init(); // Initialize the UART
+//
+//    sc_printf("Starting LED control program...\n");
+//
+//    while(1){
+//		// Turn on all LEDs
+//		*led = 0xFF; // 8 LEDs, turn them all on
+//		sc_printf("LEDs turned on.\n");
+//
+//		// Wait for a while
+//		for (volatile uint32_t i = 0; i < 1000000; i++);
+//
+//		// Turn off all LEDs
+//		*led = 0x00; // Turn all LEDs off
+//		sc_printf("LEDs turned off.\n");
+//
+//		// Wait for a while
+//		for (volatile uint32_t i = 0; i < 1000000; i++);
+//    }
+//
+//    return 0;
+//}
+
+#include "sc_print.h"
+#include "uart.h"
+#include <stdint.h>
+
+// Memory-mapped addresses for controlling the 7-segment displays
+#define HEX_1_0_BASE 0xFF022000
+#define HEX_3_2_BASE 0xFF022010
+#define HEX_5_4_BASE 0xFF022020
+
+volatile uint32_t *hex_1_0 = (volatile uint32_t *)HEX_1_0_BASE;
+volatile uint32_t *hex_3_2 = (volatile uint32_t *)HEX_3_2_BASE;
+volatile uint32_t *hex_5_4 = (volatile uint32_t *)HEX_5_4_BASE;
+
+// Segment bit positions (common anode)
+#define SEG_A 0x01
+#define SEG_B 0x02
+#define SEG_C 0x04
+#define SEG_D 0x08
+#define SEG_E 0x10
+#define SEG_F 0x20
+#define SEG_G 0x40
+
+// 7-segment character encoding (Common Anode)
+const uint8_t char_to_segments[] = {
+    [' '] = 0x7F,  // All segments off
+    ['H'] = ~(SEG_B | SEG_C | SEG_E | SEG_F | SEG_G),
+    ['E'] = ~(SEG_A | SEG_D | SEG_E | SEG_F | SEG_G),
+    ['L'] = ~(SEG_D | SEG_E | SEG_F),
+    ['O'] = ~(SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F),
+    ['Y'] = ~(SEG_B | SEG_C | SEG_D | SEG_F | SEG_G),
+    ['C'] = ~(SEG_A | SEG_D | SEG_E | SEG_F),
+    ['!'] = ~(SEG_B | SEG_C),
+    ['n'] = ~(SEG_C | SEG_E | SEG_G),
+    ['e'] = ~(SEG_A | SEG_D | SEG_E | SEG_F | SEG_G),
+    ['u'] = ~(SEG_C | SEG_D | SEG_E),
+    ['r'] = ~(SEG_E | SEG_G),
+    ['o'] = ~(SEG_C | SEG_D | SEG_E | SEG_G),
+    ['d'] = ~(SEG_B | SEG_C | SEG_D | SEG_E | SEG_G),
+    ['g'] = ~(SEG_A | SEG_B | SEG_C | SEG_D | SEG_F | SEG_G)
+};
+
+// Message to display
+const char *message = "HELLO YC! nEuroEdgE  "; // Space at the end for smooth scrolling
+#define MESSAGE_LENGTH 22
+
+// Function to write to the displays
+void write_to_displays(uint8_t d5, uint8_t d4, uint8_t d3, uint8_t d2, uint8_t d1, uint8_t d0) {
+    // Write to memory-mapped addresses
+    *hex_1_0 = (d1 << 8) | d0;
+    *hex_3_2 = (d3 << 8) | d2;
+    *hex_5_4 = (d5 << 8) | d4;
+}
+
+void scroll_message() {
+    int offset = 0;
+
+    while (1) {
+        // Fetch characters from the message in reverse order and convert to segment bit pattern
+        uint8_t d0 = char_to_segments[(unsigned char)message[(offset + 5) % MESSAGE_LENGTH]];
+        uint8_t d1 = char_to_segments[(unsigned char)message[(offset + 4) % MESSAGE_LENGTH]];
+        uint8_t d2 = char_to_segments[(unsigned char)message[(offset + 3) % MESSAGE_LENGTH]];
+        uint8_t d3 = char_to_segments[(unsigned char)message[(offset + 2) % MESSAGE_LENGTH]];
+        uint8_t d4 = char_to_segments[(unsigned char)message[(offset + 1) % MESSAGE_LENGTH]];
+        uint8_t d5 = char_to_segments[(unsigned char)message[(offset + 0) % MESSAGE_LENGTH]];
+
+        // Display the characters on the 7-segment displays
+        write_to_displays(d5, d4, d3, d2, d1, d0);
+
+        // Print current state (for debugging)
+        sc_printf("Displaying: %c%c%c%c%c%c\n",
+                  message[(offset + 5) % MESSAGE_LENGTH],
+                  message[(offset + 4) % MESSAGE_LENGTH],
+                  message[(offset + 3) % MESSAGE_LENGTH],
+                  message[(offset + 2) % MESSAGE_LENGTH],
+                  message[(offset + 1) % MESSAGE_LENGTH],
+                  message[(offset + 0) % MESSAGE_LENGTH]);
+
+        // Wait before scrolling to the next character
+        for (volatile uint32_t i = 0; i < 500000; i++);
+
+        // Move to the next character
+        offset = (offset + 1) % MESSAGE_LENGTH;
+    }
+}
+
+int main() {
+    sc1f_uart_init(); // Initialize UART for debugging output
+
+    sc_printf("Starting scrolling message program...\n");
+    scroll_message(); // Start scrolling the message
+
+    return 0;
+}

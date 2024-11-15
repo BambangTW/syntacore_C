@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+gdb.client.commands=set remotetimeout 10\r\nset remote hardware-breakpoint-limit 2
+gdb.client.doStart=true
+gdb.client.executable=${eclipse_home}../riscv-gcc/bin/riscv64-unknown-elf-gdb
+gdb.client.other=
+gdb.openocd.doDebugInRam=false
+gdb.openocd.doInitialReset=false
+gdb.openocd.doPreRunReset=false
+gdb.openocd.enableSemihosting=false
+gdb.openocd.init.other=monitor reset halt
+gdb.openocd.initialReset.type=init
+gdb.openocd.preRun.other=
+gdb.openocd.preRunReset.type=halt
+gdb.server.doStart=true
+gdb.server.executable=${eclipse_home}../tools/bin/${openocd_executable}
+gdb.server.other=-s ${eclipse_home}../tools/share/openocd/scripts\r\n-s ${eclipse_home}../tools/share/openocd/scripts/interface/ftdi\r\n-s ${eclipse_home}../tools/share/openocd/scripts/interface\r\n-s ${eclipse_home}../tools/share/openocd/scripts/target\r\n-s ${eclipse_home}../tools/share/openocd/scripts/syntacore\r\n-f olimex-arm-usb-ocd-h.cfg\r\n-f syntacore_target.cfg\r\n-f syntacore_ide_csr_cloak.cfg -c "init;halt"

@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run x64 Spike Simulator",
+            "type": "shell",
+            "command": "${config:syntacore.ide.path}/spike/bin/spike",
+            "args": [
+                "--isa=rv64gc_zicntr",
+                "-m0x10000:0xfffff,0x40000000:1000000,0x80000000:0x10fffff8",
+                "-H",
+                "--rbb-port=9824",
+                "${config:cmake.buildDirectory}/spike_rv64/#PROJECT_NAME#.elf"
+            ],
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "Run x32 Spike Simulator",
+            "type": "shell",
+            "command": "${config:syntacore.ide.path}/spike/bin/spike",
+            "args": [
+                "--isa=rv32gc_zicntr",
+                "-m0x10000:0xfffff,0x40000000:1000000,0x80000000:0x10fffff8",
+                "-H",
+                "--rbb-port=9824",
+                "${config:cmake.buildDirectory}/spike_rv32/#PROJECT_NAME#.elf"
+            ],
+            "isBackground": true,
+            "problemMatcher": []
+        },
+    ]
+}

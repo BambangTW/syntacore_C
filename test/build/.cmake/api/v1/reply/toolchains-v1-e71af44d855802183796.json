@@ -1,0 +1,102 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/include",
+						"C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed",
+						"C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include"
+					],
+					"linkDirectories" : 
+					[
+						"C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0",
+						"C:/sc-dt/riscv-gcc/lib/gcc",
+						"C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"gcc",
+						"c",
+						"gloss",
+						"gcc"
+					]
+				},
+				"path" : "C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-gcc.exe",
+				"version" : "13.2.0"
+			},
+			"language" : "C",
+			"sourceFileExtensions" : 
+			[
+				"c",
+				"m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include/c++/13.2.0",
+						"C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include/c++/13.2.0/riscv64-unknown-elf",
+						"C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include/c++/13.2.0/backward",
+						"C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/include",
+						"C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed",
+						"C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include"
+					],
+					"linkDirectories" : 
+					[
+						"C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0",
+						"C:/sc-dt/riscv-gcc/lib/gcc",
+						"C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"stdc++",
+						"m",
+						"gcc",
+						"c",
+						"gloss",
+						"gcc"
+					]
+				},
+				"path" : "C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-g++.exe",
+				"version" : "13.2.0"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm",
+				"ccm",
+				"cxxm",
+				"c++m"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

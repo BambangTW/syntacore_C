@@ -1,0 +1,106 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "qemu/rv64_linux_clang_scr7/de1-soc",
+            "variables": {
+                "qemu": "qemu-riscv64",
+                "cpu": "syntacore-scr7",
+                "programPath": "${config:cmake.buildDirectory}/scr7_rv64/de1-soc.elf"
+            },
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${programPath}",
+            "debugServerPath": "${config:syntacore.qemu.path}/qemu-vscode-wrapper",
+            "debugServerArgs": "${config:syntacore.qemu.path}/${qemu} -cpu ${cpu} -L ${config:syntacore.gcc.path}/sysroot -g 40100 ${programPath}",
+            "miDebuggerPath": "${config:syntacore.gdb.path}/bin/riscv64-unknown-linux-gnu-gdb",
+            "miDebuggerServerAddress": ":40100",
+            "stopAtEntry": true,
+            "setupCommands": [
+                {
+                    "text": "set sysroot ${config:syntacore.gcc.path}/sysroot"
+                }
+            ]
+        },
+        {
+            "name": "qemu/rv64_elf_gnu_scr7_l2/de1-soc",
+            "variables": {
+                "qemu": "qemu-system-riscv64",
+                "machine": "scr7_l2",
+                "programPath": "${config:cmake.buildDirectory}/${machine}/de1-soc.elf"
+            },
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${programPath}",
+            "debugServerPath": "${config:syntacore.qemu.path}/qemu-vscode-wrapper",
+            "debugServerArgs": "${config:syntacore.qemu.path}/${qemu} -machine ${machine} -nographic -S -gdb tcp::40100",
+            "miDebuggerPath": "${config:syntacore.gdb.path}/bin/riscv64-unknown-elf-gdb",
+            "windows": {
+                "debugServerPath": "${config:syntacore.qemu.path}/qemu-vscode-wrapper.bat",
+                "miDebuggerPath": "${config:syntacore.gdb.path}/bin/riscv64-unknown-elf-gdb.exe"
+            },
+            "miDebuggerServerAddress": ":40100",
+            "stopAtEntry": true,
+            "postRemoteConnectCommands": [
+                {
+                    "text": "load"
+                }
+            ]
+        },
+        {
+            "name": "local_openocd/rv64_elf_gnu_scr7_l2/de1-soc",
+            "variables": {
+                "machine": "scr7_l2",
+                "programPath": "${config:cmake.buildDirectory}/${machine}/de1-soc.elf"
+            },
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${programPath}",
+            "debugServerPath": "${config:syntacore.openocd.path}/bin/openocd",
+            "debugServerArgs": "-s ${config:syntacore.openocd.path}/share/openocd/scripts -f interface/ftdi/digilent-hs2a.cfg -f target/syntacore_target.cfg -f syntacore/syntacore_ide_csr_cloak.cfg",
+            "filterStderr": true,
+            "miDebuggerPath": "${config:syntacore.gdb.path}/bin/riscv64-unknown-elf-gdb",
+            "windows": {
+                "debugServerPath": "${config:syntacore.openocd.path}/bin/openocd.exe",
+                "miDebuggerPath": "${config:syntacore.gdb.path}/bin/riscv64-unknown-elf-gdb.exe"
+            },
+            "miDebuggerServerAddress": ":3333",
+            "postRemoteConnectCommands": [
+                {
+                    "text": "load"
+                }
+            ],
+            "useExtendedRemote": true,
+            "stopAtEntry": true
+        },
+        {
+            "name": "remote_openocd/rv64_elf_gnu_scr7_l2/de1-soc",
+            "variables": {
+                "targetHostname": "YOUR_REMOTE_HOST",
+                "port": "3333",
+                "machine": "scr7_l2",
+                "programPath": "${config:cmake.buildDirectory}/${machine}/de1-soc.elf"
+            },
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${programPath}",
+            "filterStderr": true,
+            "miDebuggerPath": "${config:syntacore.gdb.path}/bin/riscv64-unknown-elf-gdb",
+            "windows": {
+                "miDebuggerPath": "${config:syntacore.gdb.path}/bin/riscv64-unknown-elf-gdb.exe"
+            },
+            "miDebuggerServerAddress": "${targetHostname}:${port}",
+            "postRemoteConnectCommands": [
+                {
+                    "text": "load"
+                }
+            ],
+            "useExtendedRemote": true,
+            "stopAtEntry": true
+        }
+    ]
+}

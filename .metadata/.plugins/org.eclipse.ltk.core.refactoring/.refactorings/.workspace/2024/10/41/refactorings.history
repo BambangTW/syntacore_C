@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;dhrystone.scr1.llvm&apos;" deleteContents="true" description="Delete resource &apos;dhrystone.scr1.llvm&apos;" element1="/dhrystone.scr1.llvm" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1728221953865"/>
+</session>

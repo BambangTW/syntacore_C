@@ -1,0 +1,117 @@
+/*
+ * Copyright (C) 2017, Syntacore Ltd.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/// @file
+/// @brief "Hello" example program
+///
+/// @copyright Copyright (C) 2017, Syntacore Ltd.
+/// Licensed under the Apache License, Version 2.0 (the "License");
+/// you may not use this file except in compliance with the License.
+/// You may obtain a copy of the License at
+///     http://www.apache.org/licenses/LICENSE-2.0
+/// Unless required by applicable law or agreed to in writing, software
+/// distributed under the License is distributed on an "AS IS" BASIS,
+/// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+/// See the License for the specific language governing permissions and
+/// limitations under the License.
+
+//#include "sc_print.h"
+//#include "uart.h" // Include uart.h to get the declaration of sc1f_uart_init()
+//
+//int main() {
+//    sc1f_uart_init(); // Initialize the UART
+//    for(int i=0; i<1000; i++){
+//        sc_printf("Hello World, I am ITS32!!\n");
+//    }
+//    return 0;
+//}
+
+///*
+// * Benchmarking Program for Syntacore SCR1 Platform
+// *
+// * This program measures the number of CPU cycles taken to perform a simple computation.
+// * It uses the 'rdcycle' instruction to read the cycle counter before and after the computation.
+// * The results are then printed using sc_printf.
+// */
+//
+//#include "sc_print.h"
+//#include "uart.h"
+//
+//static inline uint32_t read_cycle(void) {
+//    uint32_t cycle;
+//    asm volatile ("rdcycle %0" : "=r"(cycle));
+//    return cycle;
+//}
+//
+//int main() {
+//    sc1f_uart_init(); // Initialize the UART
+//
+//    sc_printf("Starting benchmark...\n");
+//
+//    uint32_t start_cycle = read_cycle();
+//
+//    // Perform the computation: sum numbers from 0 to 999,999
+//    volatile uint32_t sum = 0;
+//    for (uint32_t i = 0; i < 1000000; i++) {
+//        sum += i;
+//    }
+//
+//    uint32_t end_cycle = read_cycle();
+//
+//    uint32_t cycles_taken = end_cycle - start_cycle;
+//
+//    sc_printf("Benchmark completed.\n");
+//    sc_printf("Cycles taken: %u\n", cycles_taken);
+//    sc_printf("Sum result: %u\n", sum);
+//
+//    return 0;
+//}
+
+/*
+ * LED Control Program for Syntacore SCR1 Platform
+ *
+ * This program demonstrates how to control the LEDs by writing to the MMIO address.
+ * It turns on all LEDs, waits for a while, and then turns them off.
+ */
+
+#include "sc_print.h"
+#include "uart.h"
+
+#define LED_BASE_ADDRESS 0xFF020000
+
+volatile uint32_t *led = (volatile uint32_t *)LED_BASE_ADDRESS;
+
+int main() {
+    sc1f_uart_init(); // Initialize the UART
+
+    sc_printf("Starting LED control program...\n");
+
+    while(1){
+		// Turn on all LEDs
+		*led = 0xFF; // Assuming 8 LEDs, turn them all on
+		sc_printf("LEDs turned on.\n");
+
+		// Wait for a while
+		for (volatile uint32_t i = 0; i < 1000000; i++);
+
+		// Turn off all LEDs
+		*led = 0x00; // Turn all LEDs off
+		sc_printf("LEDs turned off.\n");
+
+		// Wait for a while
+		for (volatile uint32_t i = 0; i < 1000000; i++);
+    }
+
+    return 0;
+}

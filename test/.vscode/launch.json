@@ -1,0 +1,85 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "qemu/test",
+            "variables": {
+                "qemu": "qemu-riscv64",
+                "cpu": "syntacore-scr7",
+                "programPath": "${config:cmake.buildDirectory}/test"
+            },
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${programPath}",
+            "debugServerPath": "${config:syntacore.qemu.path}/qemu-vscode-wrapper",
+            "debugServerArgs": "${config:syntacore.qemu.path}/${qemu} -cpu ${cpu} -L ${config:syntacore.gcc.path}/sysroot -g 40100 ${programPath}",
+            "miDebuggerPath": "${config:syntacore.gdb.path}/bin/riscv64-unknown-linux-gnu-gdb",
+            "miDebuggerServerAddress": ":40100",
+            "stopAtEntry": true,
+            "setupCommands": [
+                {
+                    "text": "set sysroot ${config:syntacore.gcc.path}/sysroot"
+                }
+            ]
+        },
+        {
+            "name": "remote_gdbserver/rv64_linux_clang_scr7/test",
+            "variables": {
+                "targetHostname": "YOUR_REMOTE_HOST",
+                "targetUser": "YOUR_USERNAME",
+                "targetDir": "~",
+                "gdb_port": "3333",
+                "ssh_port": "22",
+                "programName": "test",
+                "programPath": "${config:cmake.buildDirectory}/${programName}"
+            },
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${programPath}",
+            "deploySteps": [
+                {
+                    "type": "scp",
+                    "host": {
+                        "hostName": "${targetHostname}",
+                        "port": "${ssh_port}",
+                        "user": "${targetUser}"
+                    },
+                    "targetDir": "${targetDir}",
+                    "files": [
+                        "${programPath}",
+                        "${config:syntacore.gcc.path}/sysroot/usr/bin/riscv64-unknown-linux-gnu-gdbserver"
+                    ]
+                },
+                {
+                    "type": "ssh",
+                    "host": {
+                        "hostName": "${targetHostname}",
+                        "port": "${ssh_port}",
+                        "user": "${targetUser}"
+                    },
+                    "command": "chmod ug+x ${targetDir}/riscv64-unknown-linux-gnu-gdbserver ${targetDir}/${programName}"
+                },
+                {
+                    "type": "ssh",
+                    "host": {
+                        "hostName": "${targetHostname}",
+                        "port": "${ssh_port}",
+                        "user": "${targetUser}"
+                    },
+                    "command": "${targetDir}/riscv64-unknown-linux-gnu-gdbserver :${gdb_port} ${targetDir}/${programName}",
+                    "continueOn": "Listening on port"
+                }
+            ],
+            "miDebuggerPath": "${config:syntacore.gdb.path}/bin/riscv64-unknown-linux-gnu-gdb",
+            "windows": {
+                "miDebuggerPath": "${config:syntacore.gdb.path}/bin/riscv64-unknown-linux-gnu-gdb.exe"
+            },
+            "miDebuggerServerAddress": "${targetHostname}:${gdb_port}",
+            "externalConsole": true,
+            "filterStderr": false,
+            "stopAtEntry": true
+        }
+    ]
+}

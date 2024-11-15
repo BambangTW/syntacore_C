@@ -1,0 +1,511 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:200 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The target system is: Generic -  - riscv64
+      The host system is: Windows - 10.0.22631 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-gcc.exe 
+      Build flags: -march=rv64gc_zba_zbb_zbc_zbs;-mabi=lp64d;-mcmodel=medany;-msmall-data-limit=8;-ffunction-sections;-fdata-sections;-fno-common;-ftls-model=local-exec
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/3.30.4/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-g++.exe 
+      Build flags: -march=rv64gc_zba_zbb_zbc_zbs;-mabi=lp64d;-mcmodel=medany;-msmall-data-limit=8;-ffunction-sections;-fdata-sections;-fno-common;-ftls-model=local-exec
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/3.30.4/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/CMakeScratch/TryCompile-9w053c"
+      binary: "C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/CMakeScratch/TryCompile-9w053c"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN: "C:/sc-dt/riscv-gcc"
+      CMAKE_C_COMPILER_EXTERNAL_TOOLCHAIN: "C:/sc-dt/riscv-gcc"
+      CMAKE_C_FLAGS: " -march=rv64gc_zba_zbb_zbc_zbs -mabi=lp64d -mcmodel=medany -msmall-data-limit=8 -ffunction-sections -fdata-sections -fno-common -ftls-model=local-exec"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_SYSROOT: "C:/sc-dt/riscv-gcc/riscv64-unknown-elf"
+      PLATFORM: "scr7_l2"
+      PLATFORM_CONFIG_DIR: "C:/sc-dt/workspace/scr-hal/platform/scr7_l2"
+      SC_HAL_PATH: "C:/sc-dt/workspace/scr-hal"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/CMakeScratch/TryCompile-9w053c'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/sc-dt/tools/bin/make.exe -f Makefile cmTC_1c8ac/fast
+        C:/sc-dt/tools/bin/make.exe  -f CMakeFiles/cmTC_1c8ac.dir/build.make CMakeFiles/cmTC_1c8ac.dir/build
+        make[1]: Entering directory 'C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/CMakeScratch/TryCompile-9w053c'
+        Building C object CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.obj
+        C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-gcc.exe --sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf   -march=rv64gc_zba_zbb_zbc_zbs -mabi=lp64d -mcmodel=medany -msmall-data-limit=8 -ffunction-sections -fdata-sections -fno-common -ftls-model=local-exec    -v -o CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c"
+        Using built-in specs.
+        COLLECT_GCC=C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-gcc.exe
+        Target: riscv64-unknown-elf
+        Configured with: /home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/configure --host=x86_64-w64-mingw32 --target=riscv64-unknown-elf --prefix=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install --src=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b --with-isa-spec=20191213 --with-pkgversion=GCC --enable-languages=c,c++,fortran --disable-libmudflap --disable-libssp --disable-libquadmath --disable-nls --enable-tls --enable-checking=no --enable-multilib --disable-bootstrap --with-sysroot=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install/riscv64-unknown-elf --disable-shared --disable-threads --disable-libgomp --disable-tm-clone-registry --with-newlib --with-native-system-header-dir=/include --without-system-zlib
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.obj' '-c' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'CMakeFiles/cmTC_1c8ac.dir/'
+         C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/cc1.exe -quiet -v -imultilib . -iprefix C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/ -isysroot C:/sc-dt/riscv-gcc/riscv64-unknown-elf C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1c8ac.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv64gc_zba_zbb_zbc_zbs -mabi=lp64d -mcmodel=medany -msmall-data-limit=8 -misa-spec=20191213 -march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs -version -ffunction-sections -fdata-sections -fno-common -ftls-model=local-exec -o C:\\Users\\bamba\\AppData\\Local\\Temp\\ccvJMO7p.s
+        GNU C17 (GCC) version 13.2.0 (riscv64-unknown-elf)
+        	compiled by GNU C version 9.3-win32 20200320, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/include"
+        ignoring nonexistent directory "C:/sc-dt/riscv-gcc/riscv64-unknown-elf/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install/lib/gcc/riscv64-unknown-elf/13.2.0/../../../../include"
+        ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed"
+        ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include"
+        ignoring duplicate directory "C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include
+         C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed
+         C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include
+        End of search list.
+        Compiler executable checksum: 286310d6e5d7b6712ee51da59ecf3868
+        COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.obj' '-c' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'CMakeFiles/cmTC_1c8ac.dir/'
+         C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/bin/as.exe -v --traditional-format -march=rv64gc_zba_zbb_zbc_zbs -march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs -mabi=lp64d -misa-spec=20191213 -o CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.obj C:\\Users\\bamba\\AppData\\Local\\Temp\\ccvJMO7p.s
+        GNU assembler version 2.42.0 (riscv64-unknown-elf) using BFD version (GNU Binutils) 2.42.0.20240402
+        COMPILER_PATH=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/;C:/sc-dt/riscv-gcc/bin/../libexec/gcc/;C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/bin/
+        LIBRARY_PATH=C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/;C:/sc-dt/riscv-gcc/bin/../lib/gcc/;C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/;C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib/
+        COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.obj' '-c' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_1c8ac
+        C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-gcc.exe --sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf  -march=rv64gc_zba_zbb_zbc_zbs -mabi=lp64d -mcmodel=medany -msmall-data-limit=8 -ffunction-sections -fdata-sections -fno-common -ftls-model=local-exec   -v "CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.obj"  -o cmTC_1c8ac
+        Using built-in specs.
+        COLLECT_GCC=C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-gcc.exe
+        COLLECT_LTO_WRAPPER=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/lto-wrapper.exe
+        Target: riscv64-unknown-elf
+        Configured with: /home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/configure --host=x86_64-w64-mingw32 --target=riscv64-unknown-elf --prefix=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install --src=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b --with-isa-spec=20191213 --with-pkgversion=GCC --enable-languages=c,c++,fortran --disable-libmudflap --disable-libssp --disable-libquadmath --disable-nls --enable-tls --enable-checking=no --enable-multilib --disable-bootstrap --with-sysroot=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install/riscv64-unknown-elf --disable-shared --disable-threads --disable-libgomp --disable-tm-clone-registry --with-newlib --with-native-system-header-dir=/include --without-system-zlib
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        COMPILER_PATH=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/;C:/sc-dt/riscv-gcc/bin/../libexec/gcc/;C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/bin/
+        LIBRARY_PATH=C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/;C:/sc-dt/riscv-gcc/bin/../lib/gcc/;C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/;C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib/
+        COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'cmTC_1c8ac' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'cmTC_1c8ac.'
+         C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/collect2.exe -plugin C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\bamba\\AppData\\Local\\Temp\\cctGR4ev.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf -melf64lriscv -o cmTC_1c8ac C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/crt0.o C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtbegin.o -LC:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0 -LC:/sc-dt/riscv-gcc/bin/../lib/gcc -LC:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib -LC:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.obj -lgcc --start-group -lc -lgloss --end-group -lgcc C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'cmTC_1c8ac' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'cmTC_1c8ac.'
+        make[1]: Leaving directory 'C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/CMakeScratch/TryCompile-9w053c'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include]
+          add: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed]
+          add: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include]
+        end of search list found
+        collapse include dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include] ==> [C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/include]
+        collapse include dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed] ==> [C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed]
+        collapse include dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include] ==> [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include]
+        implicit include dirs: [C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/include;C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed;C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: 'C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/CMakeScratch/TryCompile-9w053c']
+        ignore line: []
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/sc-dt/tools/bin/make.exe -f Makefile cmTC_1c8ac/fast]
+        ignore line: [C:/sc-dt/tools/bin/make.exe  -f CMakeFiles/cmTC_1c8ac.dir/build.make CMakeFiles/cmTC_1c8ac.dir/build]
+        ignore line: [make[1]: Entering directory 'C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/CMakeScratch/TryCompile-9w053c']
+        ignore line: [Building C object CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-gcc.exe --sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf   -march=rv64gc_zba_zbb_zbc_zbs -mabi=lp64d -mcmodel=medany -msmall-data-limit=8 -ffunction-sections -fdata-sections -fno-common -ftls-model=local-exec    -v -o CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-gcc.exe]
+        ignore line: [Target: riscv64-unknown-elf]
+        ignore line: [Configured with: /home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/configure --host=x86_64-w64-mingw32 --target=riscv64-unknown-elf --prefix=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install --src=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b --with-isa-spec=20191213 --with-pkgversion=GCC --enable-languages=c c++ fortran --disable-libmudflap --disable-libssp --disable-libquadmath --disable-nls --enable-tls --enable-checking=no --enable-multilib --disable-bootstrap --with-sysroot=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install/riscv64-unknown-elf --disable-shared --disable-threads --disable-libgomp --disable-tm-clone-registry --with-newlib --with-native-system-header-dir=/include --without-system-zlib]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.2.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.obj' '-c' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'CMakeFiles/cmTC_1c8ac.dir/']
+        ignore line: [ C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/cc1.exe -quiet -v -imultilib . -iprefix C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/ -isysroot C:/sc-dt/riscv-gcc/riscv64-unknown-elf C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1c8ac.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv64gc_zba_zbb_zbc_zbs -mabi=lp64d -mcmodel=medany -msmall-data-limit=8 -misa-spec=20191213 -march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs -version -ffunction-sections -fdata-sections -fno-common -ftls-model=local-exec -o C:\\Users\\bamba\\AppData\\Local\\Temp\\ccvJMO7p.s]
+        ignore line: [GNU C17 (GCC) version 13.2.0 (riscv64-unknown-elf)]
+        ignore line: [	compiled by GNU C version 9.3-win32 20200320  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/include"]
+        ignore line: [ignoring nonexistent directory "C:/sc-dt/riscv-gcc/riscv64-unknown-elf/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install/lib/gcc/riscv64-unknown-elf/13.2.0/../../../../include"]
+        ignore line: [ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include"]
+        ignore line: [ignoring duplicate directory "C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include]
+        ignore line: [ C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed]
+        ignore line: [ C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 286310d6e5d7b6712ee51da59ecf3868]
+        ignore line: [COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.obj' '-c' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'CMakeFiles/cmTC_1c8ac.dir/']
+        ignore line: [ C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/bin/as.exe -v --traditional-format -march=rv64gc_zba_zbb_zbc_zbs -march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs -mabi=lp64d -misa-spec=20191213 -o CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.obj C:\\Users\\bamba\\AppData\\Local\\Temp\\ccvJMO7p.s]
+        ignore line: [GNU assembler version 2.42.0 (riscv64-unknown-elf) using BFD version (GNU Binutils) 2.42.0.20240402]
+        ignore line: [COMPILER_PATH=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/../libexec/gcc/]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/bin/]
+        ignore line: [LIBRARY_PATH=C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/]
+        ignore line: [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.obj' '-c' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_1c8ac]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-gcc.exe --sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf  -march=rv64gc_zba_zbb_zbc_zbs -mabi=lp64d -mcmodel=medany -msmall-data-limit=8 -ffunction-sections -fdata-sections -fno-common -ftls-model=local-exec   -v "CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.obj"  -o cmTC_1c8ac]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-gcc.exe]
+        ignore line: [COLLECT_LTO_WRAPPER=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/lto-wrapper.exe]
+        ignore line: [Target: riscv64-unknown-elf]
+        ignore line: [Configured with: /home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/configure --host=x86_64-w64-mingw32 --target=riscv64-unknown-elf --prefix=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install --src=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b --with-isa-spec=20191213 --with-pkgversion=GCC --enable-languages=c c++ fortran --disable-libmudflap --disable-libssp --disable-libquadmath --disable-nls --enable-tls --enable-checking=no --enable-multilib --disable-bootstrap --with-sysroot=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install/riscv64-unknown-elf --disable-shared --disable-threads --disable-libgomp --disable-tm-clone-registry --with-newlib --with-native-system-header-dir=/include --without-system-zlib]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.2.0 (GCC) ]
+        ignore line: [COMPILER_PATH=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/../libexec/gcc/]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/bin/]
+        ignore line: [LIBRARY_PATH=C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/]
+        ignore line: [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'cmTC_1c8ac' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'cmTC_1c8ac.']
+        link line: [ C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/collect2.exe -plugin C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\bamba\\AppData\\Local\\Temp\\cctGR4ev.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf -melf64lriscv -o cmTC_1c8ac C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/crt0.o C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtbegin.o -LC:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0 -LC:/sc-dt/riscv-gcc/bin/../lib/gcc -LC:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib -LC:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.obj -lgcc --start-group -lc -lgloss --end-group -lgcc C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtend.o]
+          arg [C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/collect2.exe] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/liblto_plugin.dll] ==> ignore
+          arg [-plugin-opt=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/lto-wrapper.exe] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\bamba\\AppData\\Local\\Temp\\cctGR4ev.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgloss] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf] ==> ignore
+          arg [-melf64lriscv] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_1c8ac] ==> ignore
+          arg [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/crt0.o] ==> obj [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/crt0.o]
+          arg [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtbegin.o] ==> obj [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtbegin.o]
+          arg [-LC:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0] ==> dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0]
+          arg [-LC:/sc-dt/riscv-gcc/bin/../lib/gcc] ==> dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc]
+          arg [-LC:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib] ==> dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib]
+          arg [-LC:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib] ==> dir [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib]
+          arg [CMakeFiles/cmTC_1c8ac.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--start-group] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgloss] ==> lib [gloss]
+          arg [--end-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtend.o] ==> obj [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'cmTC_1c8ac' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'cmTC_1c8ac.']
+        ignore line: [make[1]: Leaving directory 'C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/CMakeScratch/TryCompile-9w053c']
+        ignore line: []
+        ignore line: []
+        collapse obj [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/crt0.o] ==> [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib/crt0.o]
+        collapse obj [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtbegin.o] ==> [C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/crtbegin.o]
+        collapse obj [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtend.o] ==> [C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/crtend.o]
+        collapse library dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0] ==> [C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0]
+        collapse library dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc] ==> [C:/sc-dt/riscv-gcc/lib/gcc]
+        collapse library dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib] ==> [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib]
+        collapse library dir [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib] ==> [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib]
+        implicit libs: [gcc;c;gloss;gcc]
+        implicit objs: [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib/crt0.o;C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/crtbegin.o;C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/crtend.o]
+        implicit dirs: [C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0;C:/sc-dt/riscv-gcc/lib/gcc;C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/CMakeScratch/TryCompile-seki6x"
+      binary: "C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/CMakeScratch/TryCompile-seki6x"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_EXTERNAL_TOOLCHAIN: "C:/sc-dt/riscv-gcc"
+      CMAKE_CXX_FLAGS: " -march=rv64gc_zba_zbb_zbc_zbs -mabi=lp64d -mcmodel=medany -msmall-data-limit=8 -ffunction-sections -fdata-sections -fno-common -ftls-model=local-exec"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_C_COMPILER_EXTERNAL_TOOLCHAIN: "C:/sc-dt/riscv-gcc"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_SYSROOT: "C:/sc-dt/riscv-gcc/riscv64-unknown-elf"
+      PLATFORM: "scr7_l2"
+      PLATFORM_CONFIG_DIR: "C:/sc-dt/workspace/scr-hal/platform/scr7_l2"
+      SC_HAL_PATH: "C:/sc-dt/workspace/scr-hal"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/CMakeScratch/TryCompile-seki6x'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/sc-dt/tools/bin/make.exe -f Makefile cmTC_1bdb8/fast
+        C:/sc-dt/tools/bin/make.exe  -f CMakeFiles/cmTC_1bdb8.dir/build.make CMakeFiles/cmTC_1bdb8.dir/build
+        make[1]: Entering directory 'C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/CMakeScratch/TryCompile-seki6x'
+        Building CXX object CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.obj
+        C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-g++.exe --sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf   -march=rv64gc_zba_zbb_zbc_zbs -mabi=lp64d -mcmodel=medany -msmall-data-limit=8 -ffunction-sections -fdata-sections -fno-common -ftls-model=local-exec    -v -o CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"
+        Using built-in specs.
+        COLLECT_GCC=C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-g++.exe
+        Target: riscv64-unknown-elf
+        Configured with: /home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/configure --host=x86_64-w64-mingw32 --target=riscv64-unknown-elf --prefix=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install --src=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b --with-isa-spec=20191213 --with-pkgversion=GCC --enable-languages=c,c++,fortran --disable-libmudflap --disable-libssp --disable-libquadmath --disable-nls --enable-tls --enable-checking=no --enable-multilib --disable-bootstrap --with-sysroot=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install/riscv64-unknown-elf --disable-shared --disable-threads --disable-libgomp --disable-tm-clone-registry --with-newlib --with-native-system-header-dir=/include --without-system-zlib
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'CMakeFiles/cmTC_1bdb8.dir/'
+         C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/cc1plus.exe -quiet -v -imultilib . -iprefix C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/ -isysroot C:/sc-dt/riscv-gcc/riscv64-unknown-elf C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1bdb8.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv64gc_zba_zbb_zbc_zbs -mabi=lp64d -mcmodel=medany -msmall-data-limit=8 -misa-spec=20191213 -march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs -version -ffunction-sections -fdata-sections -fno-common -ftls-model=local-exec -o C:\\Users\\bamba\\AppData\\Local\\Temp\\ccxWcdyQ.s
+        GNU C++17 (GCC) version 13.2.0 (riscv64-unknown-elf)
+        	compiled by GNU C version 9.3-win32 20200320, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0"
+        ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0/riscv64-unknown-elf/."
+        ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0/backward"
+        ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/include"
+        ignoring nonexistent directory "C:/sc-dt/riscv-gcc/riscv64-unknown-elf/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install/lib/gcc/riscv64-unknown-elf/13.2.0/../../../../include"
+        ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed"
+        ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include"
+        ignoring duplicate directory "C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0
+         C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0/riscv64-unknown-elf/.
+         C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0/backward
+         C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include
+         C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed
+         C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include
+        End of search list.
+        Compiler executable checksum: b1bad1a6c90c274c897b017069eb10c9
+        COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'CMakeFiles/cmTC_1bdb8.dir/'
+         C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/bin/as.exe -v --traditional-format -march=rv64gc_zba_zbb_zbc_zbs -march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs -mabi=lp64d -misa-spec=20191213 -o CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\bamba\\AppData\\Local\\Temp\\ccxWcdyQ.s
+        GNU assembler version 2.42.0 (riscv64-unknown-elf) using BFD version (GNU Binutils) 2.42.0.20240402
+        COMPILER_PATH=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/;C:/sc-dt/riscv-gcc/bin/../libexec/gcc/;C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/bin/
+        LIBRARY_PATH=C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/;C:/sc-dt/riscv-gcc/bin/../lib/gcc/;C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/;C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib/
+        COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_1bdb8
+        C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-g++.exe --sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf  -march=rv64gc_zba_zbb_zbc_zbs -mabi=lp64d -mcmodel=medany -msmall-data-limit=8 -ffunction-sections -fdata-sections -fno-common -ftls-model=local-exec   -v "CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.obj"  -o cmTC_1bdb8
+        Using built-in specs.
+        COLLECT_GCC=C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-g++.exe
+        COLLECT_LTO_WRAPPER=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/lto-wrapper.exe
+        Target: riscv64-unknown-elf
+        Configured with: /home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/configure --host=x86_64-w64-mingw32 --target=riscv64-unknown-elf --prefix=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install --src=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b --with-isa-spec=20191213 --with-pkgversion=GCC --enable-languages=c,c++,fortran --disable-libmudflap --disable-libssp --disable-libquadmath --disable-nls --enable-tls --enable-checking=no --enable-multilib --disable-bootstrap --with-sysroot=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install/riscv64-unknown-elf --disable-shared --disable-threads --disable-libgomp --disable-tm-clone-registry --with-newlib --with-native-system-header-dir=/include --without-system-zlib
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        COMPILER_PATH=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/;C:/sc-dt/riscv-gcc/bin/../libexec/gcc/;C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/bin/
+        LIBRARY_PATH=C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/;C:/sc-dt/riscv-gcc/bin/../lib/gcc/;C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/;C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib/
+        COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'cmTC_1bdb8' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'cmTC_1bdb8.'
+         C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/collect2.exe -plugin C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\bamba\\AppData\\Local\\Temp\\ccJsD1oZ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf -melf64lriscv -o cmTC_1bdb8 C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/crt0.o C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtbegin.o -LC:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0 -LC:/sc-dt/riscv-gcc/bin/../lib/gcc -LC:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib -LC:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc --start-group -lc -lgloss --end-group -lgcc C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'cmTC_1bdb8' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'cmTC_1bdb8.'
+        make[1]: Leaving directory 'C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/CMakeScratch/TryCompile-seki6x'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0]
+          add: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0/riscv64-unknown-elf/.]
+          add: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0/backward]
+          add: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include]
+          add: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed]
+          add: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include]
+        end of search list found
+        collapse include dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0] ==> [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include/c++/13.2.0]
+        collapse include dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0/riscv64-unknown-elf/.] ==> [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include/c++/13.2.0/riscv64-unknown-elf]
+        collapse include dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0/backward] ==> [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include/c++/13.2.0/backward]
+        collapse include dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include] ==> [C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/include]
+        collapse include dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed] ==> [C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed]
+        collapse include dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include] ==> [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include]
+        implicit include dirs: [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include/c++/13.2.0;C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include/c++/13.2.0/riscv64-unknown-elf;C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include/c++/13.2.0/backward;C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/include;C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed;C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: 'C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/CMakeScratch/TryCompile-seki6x']
+        ignore line: []
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/sc-dt/tools/bin/make.exe -f Makefile cmTC_1bdb8/fast]
+        ignore line: [C:/sc-dt/tools/bin/make.exe  -f CMakeFiles/cmTC_1bdb8.dir/build.make CMakeFiles/cmTC_1bdb8.dir/build]
+        ignore line: [make[1]: Entering directory 'C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/CMakeScratch/TryCompile-seki6x']
+        ignore line: [Building CXX object CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-g++.exe --sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf   -march=rv64gc_zba_zbb_zbc_zbs -mabi=lp64d -mcmodel=medany -msmall-data-limit=8 -ffunction-sections -fdata-sections -fno-common -ftls-model=local-exec    -v -o CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-g++.exe]
+        ignore line: [Target: riscv64-unknown-elf]
+        ignore line: [Configured with: /home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/configure --host=x86_64-w64-mingw32 --target=riscv64-unknown-elf --prefix=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install --src=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b --with-isa-spec=20191213 --with-pkgversion=GCC --enable-languages=c c++ fortran --disable-libmudflap --disable-libssp --disable-libquadmath --disable-nls --enable-tls --enable-checking=no --enable-multilib --disable-bootstrap --with-sysroot=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install/riscv64-unknown-elf --disable-shared --disable-threads --disable-libgomp --disable-tm-clone-registry --with-newlib --with-native-system-header-dir=/include --without-system-zlib]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.2.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'CMakeFiles/cmTC_1bdb8.dir/']
+        ignore line: [ C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/cc1plus.exe -quiet -v -imultilib . -iprefix C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/ -isysroot C:/sc-dt/riscv-gcc/riscv64-unknown-elf C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1bdb8.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv64gc_zba_zbb_zbc_zbs -mabi=lp64d -mcmodel=medany -msmall-data-limit=8 -misa-spec=20191213 -march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs -version -ffunction-sections -fdata-sections -fno-common -ftls-model=local-exec -o C:\\Users\\bamba\\AppData\\Local\\Temp\\ccxWcdyQ.s]
+        ignore line: [GNU C++17 (GCC) version 13.2.0 (riscv64-unknown-elf)]
+        ignore line: [	compiled by GNU C version 9.3-win32 20200320  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0"]
+        ignore line: [ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0/riscv64-unknown-elf/."]
+        ignore line: [ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0/backward"]
+        ignore line: [ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/include"]
+        ignore line: [ignoring nonexistent directory "C:/sc-dt/riscv-gcc/riscv64-unknown-elf/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install/lib/gcc/riscv64-unknown-elf/13.2.0/../../../../include"]
+        ignore line: [ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "C:/sc-dt/riscv-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include"]
+        ignore line: [ignoring duplicate directory "C:/sc-dt/riscv-gcc/riscv64-unknown-elf/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0]
+        ignore line: [ C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0/riscv64-unknown-elf/.]
+        ignore line: [ C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include/c++/13.2.0/backward]
+        ignore line: [ C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include]
+        ignore line: [ C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include-fixed]
+        ignore line: [ C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: b1bad1a6c90c274c897b017069eb10c9]
+        ignore line: [COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'CMakeFiles/cmTC_1bdb8.dir/']
+        ignore line: [ C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/bin/as.exe -v --traditional-format -march=rv64gc_zba_zbb_zbc_zbs -march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs -mabi=lp64d -misa-spec=20191213 -o CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\bamba\\AppData\\Local\\Temp\\ccxWcdyQ.s]
+        ignore line: [GNU assembler version 2.42.0 (riscv64-unknown-elf) using BFD version (GNU Binutils) 2.42.0.20240402]
+        ignore line: [COMPILER_PATH=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/../libexec/gcc/]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/bin/]
+        ignore line: [LIBRARY_PATH=C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/]
+        ignore line: [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_1bdb8]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-g++.exe --sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf  -march=rv64gc_zba_zbb_zbc_zbs -mabi=lp64d -mcmodel=medany -msmall-data-limit=8 -ffunction-sections -fdata-sections -fno-common -ftls-model=local-exec   -v "CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.obj"  -o cmTC_1bdb8]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:/sc-dt/riscv-gcc/bin/riscv64-unknown-elf-g++.exe]
+        ignore line: [COLLECT_LTO_WRAPPER=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/lto-wrapper.exe]
+        ignore line: [Target: riscv64-unknown-elf]
+        ignore line: [Configured with: /home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/configure --host=x86_64-w64-mingw32 --target=riscv64-unknown-elf --prefix=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install --src=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b --with-isa-spec=20191213 --with-pkgversion=GCC --enable-languages=c c++ fortran --disable-libmudflap --disable-libssp --disable-libquadmath --disable-nls --enable-tls --enable-checking=no --enable-multilib --disable-bootstrap --with-sysroot=/home/ci_user/.conan2/p/b/riscv5c948be4ceef9/b/build/Windows-x86_64/install/riscv64-unknown-elf --disable-shared --disable-threads --disable-libgomp --disable-tm-clone-registry --with-newlib --with-native-system-header-dir=/include --without-system-zlib]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.2.0 (GCC) ]
+        ignore line: [COMPILER_PATH=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/../libexec/gcc/]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/bin/]
+        ignore line: [LIBRARY_PATH=C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/]
+        ignore line: [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/]
+        ignore line: [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'cmTC_1bdb8' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'cmTC_1bdb8.']
+        link line: [ C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/collect2.exe -plugin C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/liblto_plugin.dll -plugin-opt=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\bamba\\AppData\\Local\\Temp\\ccJsD1oZ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf -melf64lriscv -o cmTC_1bdb8 C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/crt0.o C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtbegin.o -LC:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0 -LC:/sc-dt/riscv-gcc/bin/../lib/gcc -LC:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib -LC:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc --start-group -lc -lgloss --end-group -lgcc C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtend.o]
+          arg [C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/collect2.exe] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/liblto_plugin.dll] ==> ignore
+          arg [-plugin-opt=C:/sc-dt/riscv-gcc/bin/../libexec/gcc/riscv64-unknown-elf/13.2.0/lto-wrapper.exe] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\bamba\\AppData\\Local\\Temp\\ccJsD1oZ.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgloss] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf] ==> ignore
+          arg [-melf64lriscv] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_1bdb8] ==> ignore
+          arg [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/crt0.o] ==> obj [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/crt0.o]
+          arg [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtbegin.o] ==> obj [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtbegin.o]
+          arg [-LC:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0] ==> dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0]
+          arg [-LC:/sc-dt/riscv-gcc/bin/../lib/gcc] ==> dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc]
+          arg [-LC:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib] ==> dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib]
+          arg [-LC:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib] ==> dir [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib]
+          arg [CMakeFiles/cmTC_1bdb8.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--start-group] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgloss] ==> lib [gloss]
+          arg [--end-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtend.o] ==> obj [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='--sysroot=C:/sc-dt/riscv-gcc/riscv64-unknown-elf' '-march=rv64gc_zba_zbb_zbc_zbs' '-mabi=lp64d' '-mcmodel=medany' '-msmall-data-limit=8' '-ffunction-sections' '-fdata-sections' '-fno-common' '-ftls-model=local-exec' '-v' '-o' 'cmTC_1bdb8' '-misa-spec=20191213' '-march=rv64imafdc_zicsr_zifencei_zba_zbb_zbc_zbs' '-dumpdir' 'cmTC_1bdb8.']
+        ignore line: [make[1]: Leaving directory 'C:/Users/bamba/OneDrive/Documents/Programming/syntacore/test/build/CMakeFiles/CMakeScratch/TryCompile-seki6x']
+        ignore line: []
+        ignore line: []
+        collapse obj [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib/crt0.o] ==> [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib/crt0.o]
+        collapse obj [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtbegin.o] ==> [C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/crtbegin.o]
+        collapse obj [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/crtend.o] ==> [C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/crtend.o]
+        collapse library dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0] ==> [C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0]
+        collapse library dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc] ==> [C:/sc-dt/riscv-gcc/lib/gcc]
+        collapse library dir [C:/sc-dt/riscv-gcc/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/../../../../riscv64-unknown-elf/lib] ==> [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib]
+        collapse library dir [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib] ==> [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib]
+        implicit libs: [stdc++;m;gcc;c;gloss;gcc]
+        implicit objs: [C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib/crt0.o;C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/crtbegin.o;C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0/crtend.o]
+        implicit dirs: [C:/sc-dt/riscv-gcc/lib/gcc/riscv64-unknown-elf/13.2.0;C:/sc-dt/riscv-gcc/lib/gcc;C:/sc-dt/riscv-gcc/riscv64-unknown-elf/lib]
+        implicit fwks: []
+      
+      
+...

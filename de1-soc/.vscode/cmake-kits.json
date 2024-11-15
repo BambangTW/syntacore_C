@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Syntacore rv64_elf_gnu_scr7_l2",
+        "toolchainFile": "C:/sc-dt/workspace/cmake-toolchains/riscv64-elf-gcc.cmake",
+        "environmentVariables": {
+            "SC_GCC_PATH": "C:/sc-dt/riscv-gcc",
+            "SC_CLANG_PATH": "C:/sc-dt/llvm",
+            "SC_HAL_PATH": "c:/Users/bamba/OneDrive/Documents/Programming/syntacore/de1-soc/scr-hal",
+            "SC_BSP_PATH": "c:/Users/bamba/OneDrive/Documents/Programming/syntacore/de1-soc/scr-hal"
+        },
+        "cmakeSettings": {
+            "HAL_PRINTF_LEVEL": "3",
+            "OPT": "0",
+            "PLATFORM": "scr7_l2"
+        }
+    },
+    {
+        "name": "Syntacore rv64_elf_clang_scr9_l2",
+        "toolchainFile": "C:/sc-dt/workspace/cmake-toolchains/riscv64-elf-clang.cmake",
+        "environmentVariables": {
+            "SC_GCC_PATH": "C:/sc-dt/riscv-gcc",
+            "SC_CLANG_PATH": "C:/sc-dt/llvm",
+            "SC_HAL_PATH": "c:/Users/bamba/OneDrive/Documents/Programming/syntacore/de1-soc/scr-hal",
+            "SC_BSP_PATH": "c:/Users/bamba/OneDrive/Documents/Programming/syntacore/de1-soc/scr-hal"
+        },
+        "cmakeSettings": {
+            "HAL_PRINTF_LEVEL": "3",
+            "OPT": "0",
+            "PLATFORM": "scr9_l2"
+        }
+    },
+    {
+        "name": "Syntacore rv64_linux_gnu_scr9",
+        "toolchainFile": "C:/sc-dt/workspace/cmake-toolchains/riscv64-linux-gcc.cmake",
+        "environmentVariables": {
+            "SC_GCC_PATH": "C:/sc-dt/riscv-gcc",
+            "SC_CLANG_PATH": "C:/sc-dt/llvm"
+        },
+        "cmakeSettings": {
+            "HAL_PRINTF_LEVEL": "3",
+            "OPT": "0",
+            "CPU": "scr9-rv64"
+        }
+    },
+    {
+        "name": "Syntacore rv64_linux_clang_scr7",
+        "toolchainFile": "C:/sc-dt/workspace/cmake-toolchains/riscv64-linux-clang.cmake",
+        "environmentVariables": {
+            "SC_GCC_PATH": "C:/sc-dt/riscv-gcc",
+            "SC_CLANG_PATH": "C:/sc-dt/llvm"
+        },
+        "cmakeSettings": {
+            "HAL_PRINTF_LEVEL": "3",
+            "OPT": "0",
+            "CPU": "scr7-rv64"
+        }
+    }
+]

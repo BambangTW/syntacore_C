@@ -1,0 +1,11 @@
+14:08:40 **** Incremental Build of configuration Debug for project hello_c.scr1 ****
+make all 
+Invoking: GNU RISC-V Cross Print Size
+riscv64-unknown-elf-size --format=berkeley "hello_c.scr1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   8944	     28	    436	   9408	   24c0	hello_c.scr1.elf
+Finished building: hello_c.scr1.siz
+ 
+
+14:08:40 Build Finished. 0 errors, 0 warnings. (took 201ms)
+
